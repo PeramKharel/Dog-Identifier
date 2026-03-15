@@ -1,2 +1,6 @@
 downloaded_breeds
-data
+data/
+downloaded_breeds/
+saved_models/
+logs/
+training_plots/
