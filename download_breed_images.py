@@ -32,7 +32,6 @@ def download_breed_images(breed_folder, download_dir, max_num=30):
     os.makedirs(save_dir, exist_ok=True)
     
     query = folder_to_query(breed_folder)
-    # print(f"\n📥 Downloading {max_num} images for: {query}")
     
     crawler = BingImageCrawler(
         storage={'root_dir': save_dir},
@@ -63,7 +62,7 @@ def main():
     # breeds = breeds[:5]   
  
     for i, breed in enumerate(breeds, 1):
-        print("Processing: " + str(i) + " of " + str(len(breeds)) + " : " + breed)
+        print("Processing: ", breed)
         # print(f"\n[{i}/{len(breeds)}] Processing: {breed}")
         download_breed_images(breed, download_base, max_num=10)
     
